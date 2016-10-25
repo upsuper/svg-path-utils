@@ -1,0 +1,6 @@
+[package]
+name = "svg-path-utils"
+version = "0.1.0"
+authors = ["Xidorn Quan <me@upsuper.org>"]
+
+[dependencies]
