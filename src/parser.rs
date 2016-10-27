@@ -1,6 +1,5 @@
 use leak::Leak;
 use regex::{Regex, FindMatches};
-use std::str::FromStr;
 
 use command::{Command, CommandParam};
 
@@ -98,7 +97,7 @@ impl<'c> Iterator for Commands<'c> {
                     match $var {
                         $(
                             $char => {
-                                let value = FromStr::from_str(param);
+                                let value = param.parse();
                                 CommandParam::$tag(value.expect("invalid param"))
                             }
                         )*
